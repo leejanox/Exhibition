@@ -1,0 +1,30 @@
+@use '@exhibition/styles/index' as *;
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw; height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &__loading{
+        width: 100%; height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        @include flex-center;
+        opacity: 1; z-index: 2;
+        will-change: opacity z-index;
+    }
+
+    &__introScene{
+        width: 100%; height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        @include flex-center;
+        opacity: 0; z-index: 0;
+        will-change: opacity z-index;
+    }
+}

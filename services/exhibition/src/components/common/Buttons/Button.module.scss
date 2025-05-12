@@ -1,0 +1,33 @@
+@use '@exhibition/styles/index' as *;
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.5em 1em;
+    min-width: 10em; max-width: 20em;
+    min-height: 3em; max-height: 6em;
+    border: 0; border-bottom: 1px solid $color-surface;
+    background-color: transparent; color: $color-surface;
+    font-size: $font-size-sm; font-weight: $font-weight-normal;
+    letter-spacing: 0.25em; text-transform: capitalize;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &:disabled{
+        opacity: 0.5;
+    }
+
+    &:hover {
+        //box-shadow: offset-x offset-y blur spread color;
+        box-shadow: 0 0.2em 0.6em -0.3em $color-surface;
+    }
+}
+
+

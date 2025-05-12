@@ -1,0 +1,115 @@
+@use '@exhibition/styles/index' as *;
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%; max-height: 40vh;
+    background-color: black;
+    color: $color-text2;
+
+
+    &__header {
+        //상 좌우 하
+        padding: 3em 10em 1em;
+        overflow: hidden;
+
+        //top
+        &__top {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; max-height: 10vh;
+
+            padding: $padding-description-main-tb $padding-description-main-lr;
+            @include flex-between;
+            background-color: transparent;
+            z-index: 100;
+            backdrop-filter: blur(3px);
+            will-change: transform;
+
+            
+                
+            svg {
+                width: 2em; height: 2em;
+                fill: $color-text2;
+            }
+
+            &__menu {
+                @include flex-center;
+                flex-direction: row;
+                gap: 2em;
+
+                &__item {
+                    @include hover-underline($color-text2);
+
+                    a {
+                        font-size: $font-size-lg;
+                        font-weight: $font-weight-light;
+                    }
+                }   
+            }
+        }
+
+        //bottom
+        &__bottom {
+            //상 우 하 좌 +         //padding: 3em 10em 1em;
+            padding: 4em 1em 2em 1em;
+            //padding: 7em 11em 3em 11em;
+            width: 100%; max-height: 30vh;
+        }
+    }
+}
+
+//전시회 소개 페이지 헤더
+.container__header__bottom__inner {
+    width: inherit; max-height: inherit;
+    display: flex; align-items: last baseline; justify-content: space-between;
+
+    span {
+        position: absolute;
+        right: 0; margin-top: .5em;
+        color: $color-text1;
+        font-size: $font-size-2xs;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        position: relative;
+        letter-spacing: 0.1em;
+
+        h1 {
+            font-size: $font-size-xl;
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    &__description {
+
+        letter-spacing: 0.1em;
+
+        p {
+            font-size: $font-size-xl;
+            font-weight: $font-weight-normal;
+        }
+
+        ul {
+            @include flex-center; flex-direction: row; gap: 1.6em;
+
+            li {
+                position: relative;
+            }
+        }
+    }
+}

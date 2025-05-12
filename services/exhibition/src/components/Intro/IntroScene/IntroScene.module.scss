@@ -1,0 +1,121 @@
+@use '@exhibition/styles/index' as *;
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+.introScene {
+    width: 100%; height: 100%;
+    background-color: $color-background3;
+    //background-color: $color-background2;
+    @include flex-center;
+
+    &__container {
+        position: relative;
+        width: 100%; height: 100%;
+        background-color: $color-background3;
+        //background-color: $color-background2;
+    }
+}
+
+.overlay {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: transparent;
+    @include flex-column-center;
+
+    &__header {
+        width: 100%; height: auto;
+        padding: 1.4em 1.8em;
+        @include flex-between;
+        background-color: transparent;
+
+        &__logo {
+                width: 1.6em; height: 1.6em;
+                fill: $color-surface;
+                pointer-events: auto;
+        }
+
+        &__menu {
+            color: $color-surface;
+            @include flex-center; gap: 0.8em;
+            cursor: pointer;
+            pointer-events: auto;
+
+            p {
+                visibility: hidden;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                p {
+                    visibility: visible;
+                }
+            }
+
+            &__icon {
+                stroke-width: 0.17em;
+            }
+        }
+    }
+
+    &__body {
+        flex: 1;
+        @include flex-column-center;
+        mix-blend-mode: difference;
+
+        
+        &__button {
+            pointer-events: auto;
+        }
+
+        &__title {
+            @include flex-center;
+            width: 100%; height: 80vh;
+            gap: 0.4em;
+            font-size: $font-size-title-lg;
+            font-weight: $font-weight-medium;
+            letter-spacing: 0.05em;
+            color: $color-surface;
+        }
+
+        &__description {
+            font-size: $font-size-xs;
+            font-weight: $font-weight-normal;
+            letter-spacing: 0.03em;
+            color: $color-text1;
+
+            span {
+                font-weight: $font-weight-medium;
+                font-style: italic;
+                color: $color-text2;
+            }
+        }
+    }
+
+    &__footer {
+        width: 100%; height: auto;
+        padding: 1.4em 2em;
+        background-color: transparent;
+        display: flex; justify-content: flex-end;
+
+        &__logo {
+            width: 6.2em;
+            fill: $color-surface;
+            pointer-events: auto;
+        }
+    }
+}
+
+.underlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: transparent;
+    //pointer-events: all;
+}
+

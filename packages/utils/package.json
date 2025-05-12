@@ -1,0 +1,8 @@
+{
+    "name": "@janox/utils",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "echo": "echo from 'janox utils'"
+    }
+}
