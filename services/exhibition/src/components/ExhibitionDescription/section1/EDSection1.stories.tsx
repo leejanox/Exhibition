@@ -11,7 +11,9 @@ const meta: Meta<typeof EDSection1> = {
   decorators: [
     (Story) => (
       <BrowserRouter>
-        <Story />
+        <div style={{width: '100%', height: '100%', border: '1px solid white'}}>
+          <Story />
+        </div>
       </BrowserRouter>
     )
   ],

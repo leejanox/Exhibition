@@ -26,8 +26,27 @@ button {
 
     &:hover {
         //box-shadow: offset-x offset-y blur spread color;
-        box-shadow: 0 0.2em 0.6em -0.3em $color-surface;
+        //box-shadow: 0 0.2em 0.6em -0.3em $color-surface;
+        scale: 1.05;
     }
 }
 
+
+.ChangeLanguageButton {
+    position: relative;
+    border: 1px solid $color-surface;
+    border-radius: 20em;
+    max-width: 2em; max-height: 2em;
+    background-color: transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20%; height: 20%;
+        border-radius: 20em;
+        background-color: $color-surface;
+    }
+}
 

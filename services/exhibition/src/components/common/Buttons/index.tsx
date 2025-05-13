@@ -14,3 +14,10 @@ export const Button = ({children, onClick, disabled}:ButtonProps) => {
         </button>
     )
 }
+
+
+export const ChangeLanguageButton = ({ onClick, disabled}:ButtonProps) => {
+    return (
+        <button className={styles.ChangeLanguageButton} onClick={onClick} disabled={disabled}/>
+    )
+}

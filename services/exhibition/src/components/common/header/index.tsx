@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
+interface HeaderProps {
+    children?: React.ReactNode;
+    page?: 'exhibition' | 'department';
+}
 
-export const Header = ({children}:{children:React.ReactNode}) => {
+export const Header = ({children, page}:HeaderProps) => {
 
     const topRef = useRef<HTMLDivElement>(null);
     const lastScrollY = useRef(0);
@@ -19,9 +23,10 @@ export const Header = ({children}:{children:React.ReactNode}) => {
             if(!element) return;
 
             if(currentScrollY > 50) {
-                c//onsole.log('스크롤 아래로');
+                //onsole.log('스크롤 아래로');
                 gsap.to(element,{
                     y: -100,
+                    opacity: 0,
                     duration: 0.5,
                     ease: 'power2.inOut'
                 })
@@ -30,6 +35,7 @@ export const Header = ({children}:{children:React.ReactNode}) => {
                 //console.log('스크롤 위로');
                 gsap.to(element,{
                     y: 0,
+                    opacity: 1,
                     duration: 0.5,
                     ease: 'power2.inOut'
                 })
@@ -77,7 +83,7 @@ export const Header = ({children}:{children:React.ReactNode}) => {
 }
 
 //소개 페이지 헤더
-interface DescriptionHeaderProps {
+interface DescriptionHeaderProps extends HeaderProps {
     title: string;
     category: string;
     location?: string;
@@ -85,10 +91,10 @@ interface DescriptionHeaderProps {
     date: string;
 }
 
-export const DescriptionHeader = ({title, category, location, author, date}:DescriptionHeaderProps) => {
+export const DescriptionHeader = ({title, category, location, author, date, page}:DescriptionHeaderProps) => {
     return (
-        <div className={styles.container__header__bottom__inner}>
-            <div className={styles.container__header__bottom__inner__title}>
+        <div className={`${styles.container__header__bottom__inner} ${page === 'exhibition' ? styles.exhibition : styles.department}`}>
+            <div className={`${styles.container__header__bottom__inner__title} ${page === 'exhibition' ? styles.exhibition : styles.department}`}>
                 <h1>{title}</h1>
                 <span>title</span>
             </div>
@@ -99,6 +105,27 @@ export const DescriptionHeader = ({title, category, location, author, date}:Desc
                     {author && <li><p>{author}</p><span>author</span></li>}
                     <li><p>{date}</p><span>date</span></li>
                 </ul>
+            </div>
+        </div>
+    )
+}
+
+// 학과 소개 페이지 헤더
+interface DepartmentHeaderProps extends HeaderProps {
+    title: string;
+    subtitle: string;
+    location: string;
+}
+
+export const DepartmentHeader = ({title, subtitle, location, page}:DepartmentHeaderProps) => {
+    return (
+        <div className={`${styles.container__header__bottom__inner} ${page === 'exhibition' ? styles.exhibition : styles.department}`}>
+            <div className={`${styles.container__header__bottom__inner__title} ${page === 'exhibition' ? styles.exhibition : styles.department}`}>
+                <h1>{title}</h1>
+                <span>{subtitle}</span>
+            </div>
+            <div className={styles.container__header__bottom__inner__location}>
+                <span>{location}</span>
             </div>
         </div>
     )

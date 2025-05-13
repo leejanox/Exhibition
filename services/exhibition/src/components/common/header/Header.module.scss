@@ -22,30 +22,31 @@ a {
 
     &__header {
         //상 좌우 하
-        padding: 3em 10em 1em;
+        padding:$padding-description-main-tb * 2 $padding-description-main-lr 1em;
         overflow: hidden;
 
         //top
         &__top {
             position: fixed;
             top: 0; left: 0;
-            width: 100%; max-height: 10vh;
+            width: 100%; max-height: 5vh;
 
-            padding: $padding-description-main-tb $padding-description-main-lr;
+            padding: $padding-description-main-tb * 1.5 calc($padding-description-main-lr + 2em);
             @include flex-between;
             background-color: transparent;
             z-index: 100;
             backdrop-filter: blur(3px);
-            will-change: transform;
-
-            
+            will-change: transform, opacity;
                 
             svg {
+                mix-blend-mode: difference;
                 width: 2em; height: 2em;
                 fill: $color-text2;
+                cursor: pointer;
             }
 
             &__menu {
+                mix-blend-mode: difference;
                 @include flex-center;
                 flex-direction: row;
                 gap: 2em;
@@ -63,39 +64,63 @@ a {
 
         //bottom
         &__bottom {
-            //상 우 하 좌 +         //padding: 3em 10em 1em;
-            padding: 4em 1em 2em 1em;
-            //padding: 7em 11em 3em 11em;
-            width: 100%; max-height: 30vh;
+            //상 우 하 좌 +         
+            padding: 4em 2em 2em 2em;
+            width: 100%; max-height: 35vh;
         }
     }
 }
 
 //전시회 소개 페이지 헤더
 .container__header__bottom__inner {
+
+        
     width: inherit; max-height: inherit;
     display: flex; align-items: last baseline; justify-content: space-between;
 
-    span {
-        position: absolute;
-        right: 0; margin-top: .5em;
-        color: $color-text1;
-        font-size: $font-size-2xs;
-        font-weight: $font-weight-bold;
-        text-transform: uppercase;
-    }
-
+    //전시회 _ 학과소개 둘다
     &__title {
         position: relative;
         letter-spacing: 0.1em;
 
-        h1 {
-            font-size: $font-size-xl;
-            font-weight: $font-weight-normal;
+        &.exhibition {
+            h1 {
+                font-size: $font-size-xl;
+                font-weight: $font-weight-normal;
+                }
+        }
+
+        &.department {
+            text-align: baseline;
+            h1 {
+                font-size: $font-size-lg;
+                font-weight: $font-weight-normal;
+            }
+            span {
+                font-size: $font-size-base;
+                font-weight: $font-weight-light;
+                color: $color-text1;
+            }
         }
     }
 
-    &__description {
+    //전시회 소개 페이지
+    &.exhibition {
+        width: inherit; max-height: inherit;
+        display: flex; align-items: last baseline; justify-content: space-between;
+
+        span {
+        
+            position: absolute;
+            right: 0; margin-top: .5em;
+            color: $color-text1;
+            font-size: $font-size-2xs;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+        }
+    }
+
+    &__description { //전시회만
 
         letter-spacing: 0.1em;
 
@@ -112,4 +137,16 @@ a {
             }
         }
     }
+
+    //학과소개 페이지
+
+    &__department {
+        padding-top: 2em;
+    }
+
+    &__location {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+    }
+
 }
