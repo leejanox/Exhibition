@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Intro } from '@exhibition/pages/Intro'
+import { DepartmentDescription } from './pages/DepartmentDescription'
+import { ExhibitionDescription } from './pages/ExhibitionDescription'
 
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Intro />} />
+        <Route path='/department' element={<DepartmentDescription />} />
+        <Route path='/exhibition' element={<ExhibitionDescription />} />  
       </Routes>
     </>
   )
