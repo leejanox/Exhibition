@@ -46,11 +46,6 @@ export const EDSection2 = ({language = 'korean'}: EDSection2Props) => {
                         </div>
                     ))}
                 </div>
-                <Button>
-                    <Link to='#section3'>
-                        <span>{'오시는 길 \u27AF'}</span>
-                    </Link>
-                </Button>
             </div>
         </div>
     )

@@ -17,6 +17,7 @@ export const ExhibitionDescription = () => {
                     category='AI EXHIBITION DESCRIPTION'
                     location='Seoul, Korea'
                     date='2025.05.12'
+                    page='exhibition'
                 />
             </Header>                
             <section id='section1'>

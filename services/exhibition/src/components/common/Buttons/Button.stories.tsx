@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import {Button, ChangeLanguageButton} from './index';
+import {Button} from './index';
 
 const meta: Meta<typeof Button> = {
     title: 'Common/Buttons',
@@ -43,12 +43,5 @@ export const LongText: Story = {
         children:<span>Button with long text</span>
     },
     render: (args) => <Button {...args} />
-};
-
-export const ChangeLanguage: Story = {
-    args: {
-        onClick: () => {}
-    },
-    render: (args) => <ChangeLanguageButton {...args} />
 };
 

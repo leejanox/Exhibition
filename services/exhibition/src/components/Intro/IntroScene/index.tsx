@@ -8,6 +8,7 @@ import {  Bloom, EffectComposer } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
 import { CameraInteraction2 } from './CameraMoving/CameraInteraction2';
 import { Link } from 'react-router-dom';
+
 const Overlay = ({setIsMenuOpen}: {setIsMenuOpen: (value: boolean) => void}) => {
     return (
         <div className={styles.overlay}>
