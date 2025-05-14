@@ -56,17 +56,17 @@ export const Header = ({children, page}:HeaderProps) => {
             <div className={styles.container__header}>
 
                 <div ref={topRef} className={styles.container__header__top}>
-                    <Link to='/'><Logo/></Link>
+                    <Link to='/intro'><Logo/></Link>
                     <nav id='header-menu'>
                         <ul className={styles.container__header__top__menu}>
                             <li className={styles.container__header__top__menu__item}>
-                                <Link to='/'>Main</Link>
+                                <Link to='/exhibition'>Main</Link>
                             </li>
                             <li className={styles.container__header__top__menu__item}>
                                 <Link to='/'>Works</Link>
                             </li>
                             <li className={styles.container__header__top__menu__item}>
-                                <Link to='/'>About</Link>
+                                <Link to='/department'>About</Link>
                             </li>
                             <li className={styles.container__header__top__menu__item}>
                                 <Link to='/'>Contact</Link>

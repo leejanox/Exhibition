@@ -10,9 +10,9 @@ const meta: Meta<typeof DeSection3> = {
     },
     decorators: [
         (Story) => (
-        <BrowserRouter>
-            <Story />
-        </BrowserRouter>
+            <BrowserRouter>
+                <Story />
+            </BrowserRouter>
         )
     ],
 };

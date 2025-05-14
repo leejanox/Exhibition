@@ -20,14 +20,22 @@ export const Intro = () => {
                 zIndex:0,
                 opacity:0,
                 duration:1,
-                ease:'circ.out'
-            });           
-            gsap.to(IntroSceneRef.current,{
-                opacity:1,
-                zIndex:1,
-                duration:1,
                 ease:'circ.out',
-            }); 
+                onComplete:()=>{
+                    gsap.to(IntroSceneRef.current,{
+                        opacity:1,
+                        duration:1,
+                        ease:'circ.out',
+                    });
+                    gsap.set(IntroSceneRef.current,{zIndex:1});
+                },
+            });           
+            // gsap.to(IntroSceneRef.current,{
+            //     opacity:1,
+            //     zIndex:1,
+            //     duration:1,
+            //     ease:'circ.out',
+            // }); 
         }
     },[isLoading]);
 

@@ -1,11 +1,11 @@
-export const Professor = [
+export const Professors = [
     {
         Name:'조혜정',
         Image:'/profile.jpg',
         Email:'nxlab@kopo.ac.kr',
         Phone:'033-260-7647',
         Position:'교수 / 인공지능SW융합학과장', //보직
-        TeachingFocus:'메타버스 콘텐츠, AI영상처리', //주요 과목
+        TeachingFocus:['메타버스 콘텐츠', 'AI영상처리'], //주요 과목
         Education:'서울과학기술대학교 정보통신미디어공학 박사', //학력
         Majorcareer:[
             '경기대학교 스포츠건강과학 겸임교수',
@@ -28,7 +28,7 @@ export const Professor = [
         Email: 'ky1111@kopo.ac.kr',
         Phone: '033-262-7644',
         Position: '교수',
-        TeachingFocus: '프로그래밍 언어실습, 컴퓨터 네트워크,',
+        TeachingFocus: ['프로그래밍 언어실습', '컴퓨터 네트워크'],
         Education: '인하대학교 전자공학 박사',
         Majorcareer: ['㈜한진정보통신 연구원(SI사업부)', '한림대학교 정보통신공학부 전임강사'],
         Keyachievements: {
@@ -60,7 +60,7 @@ export const Professor = [
         Email: 'ceright@kopo.ac.kr',
         Phone: '033-260-7645',
         Position: '교수수',
-        TeachingFocus: '프로그래밍언어실습, AI딥러닝모델기초',
+        TeachingFocus: ['프로그래밍 언어실습', 'AI 딥러닝 모델 기초'],
         Education: '서울시립대학교 전자전기기컴퓨터공학 박사',
         Majorcareer: ['한국과학기술연구원(KIST): 딥러닝을 활용한 신소재 개발 연구', 'AI 스타트업: 데이터 분석, 인공지능 모델개발'],
         Keyachievements: {

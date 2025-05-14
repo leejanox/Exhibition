@@ -38,7 +38,7 @@ export const Loading = ({handleLoading}:LoadingProps) => {
                     ease:'circ.out',
                     onComplete:()=>{
                         gsap.to(boxRef.current,{
-                            height: 1200,
+                            height: '100%',
                             borderRadius:0,
                             duration:2.,
                             ease:'circ.out',

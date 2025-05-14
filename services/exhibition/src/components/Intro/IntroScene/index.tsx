@@ -23,7 +23,7 @@ const Overlay = ({setIsMenuOpen}: {setIsMenuOpen: (value: boolean) => void}) => 
             </header>
             <div className={styles.overlay__body}>
                 <button className={styles.overlay__body__button}>
-                    <Link to={'/'}>Preview Exhibition</Link>
+                    <Link to={'/exhibition'}>Preview Exhibition</Link>
                 </button>
                 <h1 className={styles.overlay__body__title}>
                     <span>2025</span>
