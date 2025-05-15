@@ -60,16 +60,16 @@ export const Header = ({children, page}:HeaderProps) => {
                     <nav id='header-menu'>
                         <ul className={styles.container__header__top__menu}>
                             <li className={styles.container__header__top__menu__item}>
-                                <Link to='/exhibition'>Main</Link>
+                                <Link to='/exhibition'>전시소개</Link>
                             </li>
                             <li className={styles.container__header__top__menu__item}>
-                                <Link to='/'>Works</Link>
+                                <Link to='/department'>학과소개</Link>
                             </li>
                             <li className={styles.container__header__top__menu__item}>
-                                <Link to='/department'>About</Link>
+                                <Link to='/junior-high-tech'>1학년&하이테크</Link>
                             </li>
                             <li className={styles.container__header__top__menu__item}>
-                                <Link to='/'>Contact</Link>
+                                <Link to='/'>2학년</Link>
                             </li>
                         </ul>
                     </nav>

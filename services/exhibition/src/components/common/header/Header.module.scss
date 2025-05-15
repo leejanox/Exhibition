@@ -98,7 +98,7 @@ a {
             }
             span {
                 font-size: $font-size-base;
-                font-weight: $font-weight-light;
+                font-weight: $font-weight-normal;
                 color: $color-text1;
             }
         }
@@ -145,7 +145,7 @@ a {
     }
 
     &__location {
-        font-size: $font-size-sm;
+        font-size: $font-size-base;
         font-weight: $font-weight-light;
     }
 

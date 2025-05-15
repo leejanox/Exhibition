@@ -13,10 +13,10 @@ export const ExhibitionDescription = () => {
         <div className={styles.container}>
             <Header>
                 <DescriptionHeader
-                    title='2025 AI INFINITY'
+                    title='2025 AI INFINITY 展'
                     category='AI EXHIBITION DESCRIPTION'
-                    location='Seoul, Korea'
-                    date='2025.05.12'
+                    location='Chuncheon, Korea'
+                    date='25.06.19 - 25.06.26'
                     page='exhibition'
                 />
             </Header>                

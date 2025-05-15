@@ -1,6 +1,5 @@
 import { Canvas } from '@react-three/fiber';
 import styles from './EDSection1.module.scss';
-import { CustomPoster } from './poster/CustomPoster';
 
 export const EDSection1 = () => {
     return (
@@ -8,7 +7,6 @@ export const EDSection1 = () => {
             <Canvas camera={{ position: [0, 0, .1] }}>
                 <ambientLight intensity={1} />
                 <axesHelper args={[5]} />
-                <CustomPoster />
             </Canvas>
         </div>
     )
