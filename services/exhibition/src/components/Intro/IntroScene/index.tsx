@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import styles from './IntroScene.module.scss';
 import { Logo, LogoFull } from '@pmndrs/branding';
-import { CustomSphere } from './CustomSphere/CustomSphere';
+import { CustomSphere } from './CustomSphere';
 import {  Bloom, EffectComposer } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
-import { CameraInteraction2 } from './CameraMoving/CameraInteraction2';
+import { CameraInteraction2 } from './CameraInteraction2';
 import { Link } from 'react-router-dom';
 
 const Overlay = ({setIsMenuOpen}: {setIsMenuOpen: (value: boolean) => void}) => {

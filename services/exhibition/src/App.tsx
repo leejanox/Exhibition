@@ -3,8 +3,11 @@ import { Intro } from '@exhibition/pages/Intro'
 import { DepartmentDescription } from './pages/DepartmentDescription'
 import { ExhibitionDescription } from './pages/ExhibitionDescription'
 import { JuniorHighTech } from './pages/JuniorHighTech'
+import { useScrollToTop } from './hooks/useScrollToTop'  
 
 function App() {
+
+  useScrollToTop();
 
   return (
     <>

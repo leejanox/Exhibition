@@ -6,11 +6,83 @@
 }
 
 .container {
-    width: 100%; height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem; 
     background-color: black;
-    color: $color-surface;
-    padding: $padding-description-main-tb;
+    padding: $padding-description-main-tb $padding-description-main-lr;
+}
 
+.card {
+    background-color: transparent;
+    border: 1px solid $color-border-gray;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+
+    &__top {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__img {
+        width: 100px;
+        height: 120px;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        border: 1px solid $color-border-gray;
+    }
+
+    &__info {
+        h2 {
+            margin: 0;
+            font-size: $font-size-xl;
+            font-weight: $font-weight-bold;
+            color: $color-text2;
+        }
+        p {
+            margin: 0.2rem 0;
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            color: $color-text1;
+        }
+    }
+
+    &__section {
+        margin-top: 1rem;
+
+        h3 {
+            margin-bottom: 1em;
+            font-size: $font-size-base;
+            color: $color-text2;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            list-style: none;
+            color: $color-text2;
+            font-size: $font-size-base;
+
+                li {
+                    margin-bottom: 0.3rem;
+                    color: $color-text1;
+                }
+            }
+
+        strong {
+            display: block;
+            margin-top: 0.8rem;
+            color: $color-text2;
+        }
+
+        p {
+            font-size: $font-size-base;
+            color: $color-text1;
+        }
+    }
 }
 
 

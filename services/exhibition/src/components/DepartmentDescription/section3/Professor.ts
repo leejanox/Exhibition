@@ -1,7 +1,7 @@
-export const Professors = [
+export const Professor = [
     {
         Name:'조혜정',
-        Image:'/profile.jpg',
+        Image:'/assets/profile.jpg',
         Email:'nxlab@kopo.ac.kr',
         Phone:'033-260-7647',
         Position:'교수 / 인공지능SW융합학과장', //보직
@@ -24,7 +24,7 @@ export const Professors = [
     },
     {
         Name: '김용중',
-        Image: '/profile.jpg',
+        Image: '/assets/profile.jpg',
         Email: 'ky1111@kopo.ac.kr',
         Phone: '033-262-7644',
         Position: '교수',
@@ -56,10 +56,10 @@ export const Professors = [
     },
     {
         Name: '김정래',
-        Image: '/profile.jpg',
+        Image: '/assets/profile.jpg',
         Email: 'ceright@kopo.ac.kr',
         Phone: '033-260-7645',
-        Position: '교수수',
+        Position: '교수',
         TeachingFocus: ['프로그래밍 언어실습', 'AI 딥러닝 모델 기초'],
         Education: '서울시립대학교 전자전기기컴퓨터공학 박사',
         Majorcareer: ['한국과학기술연구원(KIST): 딥러닝을 활용한 신소재 개발 연구', 'AI 스타트업: 데이터 분석, 인공지능 모델개발'],
@@ -81,12 +81,12 @@ export const Professors = [
     },
     {
         Name: '김대웅',
-        Image: '/profile.jpg',
+        Image: '/assets/profile.jpg',
         Email: 'answer@kopo.ac.kr',
         Phone: '033-260-7646',
         Position: '교수',
         TeachingFocus: ['컴퓨터비전', '임베디드 시스템', '인공지능사물인터넷(AIoT)'],
-        Education: '숭실대학교 전자공학 석사사',
+        Education: '숭실대학교 전자공학 석사',
         Majorcareer:[
             '대한상공회의소 인력개발사업단 서울기술교육센터',
             '디지털선도기업아카데미 인공지능 분야 과정 개발',

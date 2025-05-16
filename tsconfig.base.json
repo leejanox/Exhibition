@@ -28,6 +28,7 @@
             "@exhibition/components/*":["services/exhibition/src/components/*"],
             "@exhibition/pages/*":["services/exhibition/src/pages/*"],
             "@exhibition/styles/*":["services/exhibition/src/styles/*"],
+            "@exhibition/shaders/*":["services/exhibition/src/shaders/*"],
             "@exhibition/hooks/*":["services/exhibition/src/hooks/*"],
             "@utils/*":["packages/utils/src/*"]
         }

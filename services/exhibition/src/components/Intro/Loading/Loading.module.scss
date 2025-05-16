@@ -17,7 +17,7 @@
         @include flex-column-center; gap: 1em;
 
         &__box {
-            width: 2em; height: 1.2em;
+            width: 2em; height: 2%;
             background-color: $color-background3;
             border-radius: .7em;
             transform: rotate(90deg);

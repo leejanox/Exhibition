@@ -27,6 +27,7 @@ export default defineConfig({
       '@exhibition/components': path.resolve(__dirname, 'src/components'),
       '@exhibition/pages': path.resolve(__dirname, 'src/pages'),
       '@exhibition/styles': path.resolve(__dirname, 'src/styles'),
+      '@exhibition/shaders': path.resolve(__dirname, 'src/shaders'),
       '@exhibition/hooks': path.resolve(__dirname, 'src/hooks'),
       '@utils': path.resolve(__dirname, '../utils/src'),
     },

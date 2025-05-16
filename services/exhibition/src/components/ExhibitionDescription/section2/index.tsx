@@ -31,7 +31,7 @@ export const EDSection2 = ({language = 'korean'}: EDSection2Props) => {
                     ))}
                 </div>
                 <Button>
-                    <Link to='/department'>
+                    <Link to='/department' target='_self' rel='noopener noreferrer' tabIndex={-1}>
                         <span>{'학과 소개 \u27AF'}</span>
                     </Link>
                 </Button>
