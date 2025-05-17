@@ -13,7 +13,7 @@ const Overlay = ({setIsMenuOpen}: {setIsMenuOpen: (value: boolean) => void}) => 
     return (
         <div className={styles.overlay}>
             <header className={styles.overlay__header}>
-                <Logo className={styles.overlay__header__logo}/>
+                <Logo className={styles.overlay__header__logo} onClick={() => {window.location.reload()}}/>
                 <menu className={styles.overlay__header__menu}
                     onClick={() => {setIsMenuOpen(true)}}
                 >

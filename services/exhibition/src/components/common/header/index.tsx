@@ -6,7 +6,7 @@ import gsap from 'gsap';
 
 interface HeaderProps {
     children?: React.ReactNode;
-    page?: 'exhibition' | 'department';
+    page?: 'exhibition' | 'department' ;
 }
 
 export const Header = ({children, page}:HeaderProps) => {
@@ -22,8 +22,9 @@ export const Header = ({children, page}:HeaderProps) => {
 
             if(!element) return;
 
+            // 주의 한 화면 최소 100vh 안잡아주면 문제 생김
             if(currentScrollY > 50) {
-                //onsole.log('스크롤 아래로');
+                //console.log('스크롤 아래로');
                 gsap.to(element,{
                     y: -100,
                     opacity: 0,

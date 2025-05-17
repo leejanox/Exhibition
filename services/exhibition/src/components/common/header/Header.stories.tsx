@@ -55,4 +55,3 @@ export const Department: Story = {
   },
   render: (args) => <Header {...args} />
 };
-
