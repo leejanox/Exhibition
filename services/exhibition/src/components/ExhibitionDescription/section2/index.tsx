@@ -2,6 +2,7 @@ import { Button } from '@exhibition/components/common/Buttons';
 import styles from './EDSection2.module.scss';
 import { EDdescriptionEnglish, EDParticipationList, EDInfo, EDdescriptionKorean } from './EDdescriptionText';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 interface EDSection2Props {
     language?: 'korean' | 'english';
@@ -10,15 +11,30 @@ interface EDSection2Props {
 export const EDSection2 = ({language = 'korean'}: EDSection2Props) => {
     
     const languageClass = language === 'english' ? styles.english : styles.korean;
+    const [isEnglish, setIsEnglish] = useState(false);
+
+    const handleLanguageChange = () => {
+        setIsEnglish((prev) => !prev);
+    }
+
+    useEffect(() => {
+        setIsEnglish(language === 'english');
+    }, [language]);
 
     return (
         <div className={styles.container}>
             <div className={`${styles.container__left} ${languageClass}`}> 
-                {language === 'english' ? EDdescriptionEnglish.split('\n\n').map((text: string, index: number) => (
-                    <p key={index}>{text}</p>
-                )) : EDdescriptionKorean.split('\n\n').map((text: string, index: number) => (
-                    <p key={index}>{text}</p>
-                ))}
+                <div className={styles.container__language}>
+                    <button onClick={handleLanguageChange}>{isEnglish ? 'Change to Korean' : 'Change to English'}</button>
+                </div>
+                {isEnglish ?
+                    EDdescriptionEnglish.split('\n\n').map((text: string, index: number) => (
+                        <p key={index}>{text}</p>
+                    )) :
+                    EDdescriptionKorean.split('\n\n').map((text: string, index: number) => (
+                        <p key={index}>{text}</p>
+                    ))
+                }
             </div>
             <div className={styles.container__center}>
                 <h1>참여자</h1>

@@ -1,7 +1,7 @@
 import styles from './EDSection3.module.scss';
-import { KakaoMap } from '@exhibition/components/common/KaKaoMap';
+import { KakaoMap } from '@exhibition/components/ExhibitionDescription/section3/KaKaoMap';
 import { MapPin, Phone, TramFront, TrendingUp } from 'lucide-react';
-
+import { GuestBook } from './GuestBook';
 
 export const EDSection3 = () => {
     return (
@@ -30,10 +30,7 @@ export const EDSection3 = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.container__guest}>
-                <h1>방명록</h1>
-
-            </div>
+            <GuestBook />
         </div>
     )
 }

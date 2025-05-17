@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import {Intro} from '../Intro';
+import {GuestBook} from './GuestBook';
 
-const meta: Meta<typeof Intro> = {
-  title: 'Intro/Intro',
-  component: Intro,
+const meta: Meta<typeof GuestBook> = {
+  title: 'ExhibitionDescription/GuestBook',
+  component: GuestBook,
   parameters:{
     layout: 'fullscreen',
   },
@@ -19,9 +19,9 @@ const meta: Meta<typeof Intro> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Intro>;
+type Story = StoryObj<typeof GuestBook>;
 
 export const Default: Story = {
   args: {},
-  render: () => <Intro />
+  render: () => <GuestBook />
 };

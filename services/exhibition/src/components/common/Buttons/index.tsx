@@ -4,12 +4,13 @@ interface ButtonProps {
     children: React.ReactNode;
     onClick?: () => void;
     disabled?: boolean;
+    type?: 'button' | 'submit' | 'reset';
 }
 
 
-export const Button = ({children, onClick, disabled}:ButtonProps) => {
+export const Button = ({children, onClick, disabled, ...props}:ButtonProps) => {
     return (
-        <button className={styles.button} onClick={onClick} disabled={disabled}>
+        <button {...props} className={styles.button} onClick={onClick} disabled={disabled}>
             {children}  
         </button>
     )
